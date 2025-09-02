@@ -13,7 +13,6 @@ import { Button, buttonVariants } from "./ui/button";
 import { usePathname } from "next/navigation";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
 import { useState } from "react";
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 const routes = [
     {
