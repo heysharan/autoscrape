@@ -18,11 +18,11 @@ const fitViewOptions = { padding: 2 }
 
 export default function FlowEditor({ workflow }: { workflow: Workflow }) {
     const proOptions = { hideAttribution: true }; //for hiding the water mark
-    const [ nodes, setNodes, onNodesChange ] = useNodesState([
+    const [nodes, setNodes, onNodesChange] = useNodesState([
         CreateFlowNode(TaskType.LAUNCH_BROWSER),
     ]);
-    const [ edges, setEdges, onEdgesChange ] = useEdgesState([]);
-    return(
+    const [edges, setEdges, onEdgesChange] = useEdgesState([]);
+    return (
         <main className="h-full w-full">
             <ReactFlow
                 nodes={nodes}
@@ -37,7 +37,7 @@ export default function FlowEditor({ workflow }: { workflow: Workflow }) {
                 fitView //aligns correctly to fit the view
                 fitViewOptions={fitViewOptions} //gives padding
             >
-                <Controls position="top-left" className="dark:bg-white dark:text-black" fitViewOptions={fitViewOptions}/>
+                <Controls position="top-left" className="dark:bg-white dark:text-black" fitViewOptions={fitViewOptions} />
                 <Background variant={BackgroundVariant.Dots} gap={12} size={1} />
             </ReactFlow>
         </main>
